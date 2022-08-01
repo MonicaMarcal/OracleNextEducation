@@ -1,6 +1,6 @@
 <!-- Exercicios da aula, para verificar descomente o que deseja ver-->
 
-<!--Objetivo:perguntar ao usuário o número de vitórias e empates do seu time.
+<!-- 01 -Objetivo:perguntar ao usuário o número de vitórias e empates do seu time.
 Criaremos uma variável vitorias que receberá um prompt():
 <meta charset="UTF-8">
 
@@ -25,6 +25,7 @@ mostra("Os pontos do seu time são " + pontos);
 //Utilizaremos o parseInt para essa conversão
 </script>
 -->
+<!--02
 <script>
   function pulaLinha() {
       document.write("<br>");
@@ -54,6 +55,58 @@ if(pontos == 28) {
   mostra("Seu time está igual ao ano passado.");
 
 }
+-->
+<!--03
+  Solicita ao usuario que adivinhe nosso numero
 
-mostra("FIM");
+</script>
+<script>
+  function pulaLinha() {
+      document.write("<br>");
+      document.write("<br>");
+  }
+  function mostra(frase) {
+      document.write(frase);
+      pulaLinha();
+  }
+  var numeroPensado = 5;
+  var chute = parseInt(prompt("digite seu chute!"));
+
+  if(chute == numeroPensado) {//se for igual a 5
+    mostra("Você acertou!");
+
+} else { //se não for igual a 5
+    mostra("Você errou, o número pensado foi " + numeroPensado);
+}
+//E se o programa gerasse o numeroPensado aleatoriamente,
+//a cada vez que fosse feita uma tentativa
+//Há a função Math.random(), que gera um número aleatório.
+//E para arredondarmos o resultado de Math.random()
+//TROQUE O  var numeroPensado = 5; POR var numeroPensado = Math.round(Math.random() * 10);
+</script>
+-->
+
+<!--Pode dirigir ou não-->
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+
+    
+    if( idade >= 18 && temCarteira == "S") {
+        mostra("Maior de idade, Pode dirigir");
+    } else {
+        mostra("Menor de idade, Não pode dirigir");
+    }
+
 </script>
