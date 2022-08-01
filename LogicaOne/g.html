@@ -1,0 +1,53 @@
+<!-- Exercicios da aula, para verificar descomente o que deseja ver-->
+
+<!--Declararemos uma variável anoCopa que receberá o ano 1930:
+Criaremos um alert para exibir a frase "Teve copa em", concatenada com a variável anoCopa:
+Nosso objetivo é fazer com que o programa exiba todos os anos em que houve copas do mundo.
+Precisamos informar ao programa que os anos de copa serão anoCopa mais 4:
+-->
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+/*
+var limite = prompt("Entre com a data limite");
+var anoCopa = 1930;
+while(anoCopa <= 2016) {
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+mostra("FIM");
+
+
+//O while(true) indica que sempre será repetido o conteúdo do bloco dessa função.
+// Se o while receber false, nada será repetido.
+
+//Assim como a condição if, o while testará se anoCopa é menor ou igual a 2016,
+//se for verdadeiro, as instruções contidas no bloco serão executadas.
+//Isso significa que o programa acessará o bloco, enquanto anoCopa <= 2016 for verdadeiro.
+
+//Ao chegarmos em 2017, é verificado se o número é menor ou igual a 2016,
+//não sendo, a repetição cessará, o programa sairá da instrução e imprimirá o alerta FIM.
+
+*/
+
+//Substituiremos o 2016 pela variável limite:
+var limite = parseInt(prompt("Entre com a data limite"));
+var anoCopa = 1930;
+while(anoCopa <= limite) {
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+mostra("FIM");
+</script>
+
