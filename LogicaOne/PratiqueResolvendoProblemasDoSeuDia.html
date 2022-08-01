@@ -1,6 +1,6 @@
 <!-- Exercicios da aula, para verificar descomente o que deseja ver-->
 
-<!--cálculo do IMC --01--
+<!--cálculo do IMC --01
   O cálculo do IMC, segundo a Organização Mundial da Saúde,
   é composto pelo peso divido pela altura multiplicado pela altura.
 
@@ -26,6 +26,8 @@ var imcAmigo = pesoAmigo / (alturaAmigo * alturaAmigo);
 mostra("O imc do meu amigo é " + imcAmigo); 
 </script>
 -->
+
+<!-- 02
 <meta charset="UTF-8">
 <script>
     function pulaLinha() {
@@ -46,3 +48,54 @@ calculaImc(1.71, 73)
 calculaImc(1.72, 68)
 
 </script>
+-->
+
+<!--03
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+      document.write("<br>");
+      document.write("<br>");
+}
+
+    function mostra(frase) {
+      document.write(frase);
+      pulaLinha();
+}
+function calculaImc(altura, peso) {
+
+  var imc = peso / (altura * altura);
+  return imc; //devolve um resultado dentro da própria variável
+
+}
+
+var imcFlavio = calculaImc(1.71, 73);
+var imcAmigo = calculaImc(1.72, 68);
+
+mostra(imcFlavio);
+mostra(imcAmigo);
+</script>
+-->
+<!--04
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+}
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+}
+    function calculaImc(altura, peso) {
+        return peso / (altura * altura);
+}
+
+var alturaInformada = 1.71;
+var pesoInformado = 73;
+
+var imc = calculaImc(alturaInformada, pesoInformado)
+document.write("O IMC calculado é " + imc);
+</script>
+-->
