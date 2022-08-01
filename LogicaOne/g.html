@@ -5,7 +5,8 @@ Criaremos um alert para exibir a frase "Teve copa em", concatenada com a variáv
 Nosso objetivo é fazer com que o programa exiba todos os anos em que houve copas do mundo.
 Precisamos informar ao programa que os anos de copa serão anoCopa mais 4:
 -->
-<meta charset="UTF-8">
+<!--01
+  <meta charset="UTF-8">
 
 <script>
 
@@ -51,3 +52,34 @@ while(anoCopa <= limite) {
 mostra("FIM");
 </script>
 
+-->
+
+<!--02
+  exibir o mostra("Já era, você errou!")10 vezes
+<meta charset="UTF-8">
+<script>
+     function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+      }
+     function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+      function sorteia() {
+        return Math.round(Math.random() * 100);
+      } 
+    var numeroPensado = sorteia();
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+   
+    if(chute == numeroPensado) {
+      mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+        var contador = 1;
+        while( contador <= 10 ) {
+            mostra("Já era, você errou!");
+            contador = contador + 1;
+        }
+    }
+</script>
+-->
