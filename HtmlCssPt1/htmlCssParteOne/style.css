@@ -1,5 +1,4 @@
 body {
-	
 }
 
 #banner {
@@ -7,7 +6,7 @@ body {
 }
 
 .principal{
-	background: #CCCCCC;
+	background: #7192b8;
 	padding: 30px;
 }
 
@@ -28,7 +27,7 @@ p {
 }
 
 em strong {
-	color: #FF0000;
+	color: #2b18f7;
 }
 
 .itens {
