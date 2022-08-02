@@ -16,7 +16,7 @@
 
 </script>
 -->
-<!--
+<!--02
    teremos na tela um retângulo verde, como na imagem anterior,
    mas agora temos também um retângulo cinza ao seu lado direito,
    de mesmo tamanho e, a sua direita, um retângulo vermelho com as
@@ -38,6 +38,8 @@
     pincel.fillRect(400, 0, 200, 400);
 </script>
 -->
+<!-- 03
+   Adicionando triangulo na nossa imagem
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -60,5 +62,41 @@
     pincel.lineTo(200, 400);//mover o pincel para uma nova posição
     pincel.lineTo(400, 400);//criará uma linha horizontal, do ponto que acabamos de criar até o ponto em que o cinza encontra o vermelho
     pincel.fill(); //preencha esta forma
+
+</script>
+-->
+<!-- 04
+  Vamos colocar uma circunferência azul no meio da nossa imagem
+    Posicionamento da esfera, que definiremos como 300 (X) e 200 (Y);
+    Tamanho, ou seja, o raio - que definiremos como 50;
+    O ângulo inicial, e o ângulo final, em radianos (multiplicado por PI - 3,14);
+-->
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
 
 </script>
