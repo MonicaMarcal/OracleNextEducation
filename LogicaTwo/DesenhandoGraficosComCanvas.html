@@ -1,0 +1,64 @@
+
+<!-- 01
+  Criando um retangulo cinza claro
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas"); //função querySelector() para pegar este <canvas> 
+    var pincel = tela.getContext('2d'); //tipo de pincel grafico 2d
+
+    pincel.fillStyle = 'lightgrey'; //Preencher o estilo do retangulo com a cor cinza claro
+
+   //iniciaremos no ponto 0 tanto no eixo x quanto y E Que tenha 600 de largura, e 400 de altura
+    pincel.fillRect(0, 0, 600, 400);//Preencher "fill", "rect" retângulo
+
+</script>
+-->
+<!--
+   teremos na tela um retângulo verde, como na imagem anterior,
+   mas agora temos também um retângulo cinza ao seu lado direito,
+   de mesmo tamanho e, a sua direita, um retângulo vermelho com as
+   mesmas dimensões.
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+</script>
+-->
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow'; //estilo da cor amarela
+    pincel.beginPath(); //Começar o caminho 
+    pincel.moveTo(300, 200);//posicionar nosso pincel exatamente no ponto 300, da coordenada X (que mede 600), e 200 na Y (que mede 400):
+    pincel.lineTo(200, 400);//mover o pincel para uma nova posição
+    pincel.lineTo(400, 400);//criará uma linha horizontal, do ponto que acabamos de criar até o ponto em que o cinza encontra o vermelho
+    pincel.fill(); //preencha esta forma
+
+</script>
