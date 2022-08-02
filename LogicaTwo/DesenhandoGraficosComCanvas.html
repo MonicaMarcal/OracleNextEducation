@@ -70,7 +70,7 @@
     Posicionamento da esfera, que definiremos como 300 (X) e 200 (Y);
     Tamanho, ou seja, o raio - que definiremos como 50;
     O ângulo inicial, e o ângulo final, em radianos (multiplicado por PI - 3,14);
--->
+
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -100,3 +100,38 @@
     pincel.fill();
 
 </script>
+-->
+
+<!--05
+  Exercicio desenhando o crepper
+    Retângulo 1: 350, 300 (cabeça).
+    Retângulos 2 e 3: 90, 90 (olhos).
+    Retângulo 4: 70, 100 (nariz).
+    Retângulos 5 e 6: 40, 110 (parte da boca).
+
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //cabeça verde
+    pincel.fillStyle = 'darkgreen';
+    pincel.fillRect(200, 50, 350 ,300);
+
+    //olhos pretos
+    pincel.fillStyle = 'black';
+    pincel.fillRect(250, 110, 90, 90);
+    pincel.fillRect(410, 110, 90, 90);
+
+    // nariz
+    pincel.fillRect(340, 200, 70, 100);
+
+    // boca 
+    pincel.fillRect(300, 240, 40, 110);
+    pincel.fillRect(410, 240, 40, 110); 
+    
+</script>
+-->
+<!--
+  desenhar esquadro
+-->
