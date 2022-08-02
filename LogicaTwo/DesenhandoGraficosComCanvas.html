@@ -1,0 +1,190 @@
+
+<!-- 01
+  Criando um retangulo cinza claro
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas"); //função querySelector() para pegar este <canvas> 
+    var pincel = tela.getContext('2d'); //tipo de pincel grafico 2d
+
+    pincel.fillStyle = 'lightgrey'; //Preencher o estilo do retangulo com a cor cinza claro
+
+   //iniciaremos no ponto 0 tanto no eixo x quanto y E Que tenha 600 de largura, e 400 de altura
+    pincel.fillRect(0, 0, 600, 400);//Preencher "fill", "rect" retângulo
+
+</script>
+-->
+<!--02
+   teremos na tela um retângulo verde, como na imagem anterior,
+   mas agora temos também um retângulo cinza ao seu lado direito,
+   de mesmo tamanho e, a sua direita, um retângulo vermelho com as
+   mesmas dimensões.
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+</script>
+-->
+<!-- 03
+   Adicionando triangulo na nossa imagem
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow'; //estilo da cor amarela
+    pincel.beginPath(); //Começar o caminho 
+    pincel.moveTo(300, 200);//posicionar nosso pincel exatamente no ponto 300, da coordenada X (que mede 600), e 200 na Y (que mede 400):
+    pincel.lineTo(200, 400);//mover o pincel para uma nova posição
+    pincel.lineTo(400, 400);//criará uma linha horizontal, do ponto que acabamos de criar até o ponto em que o cinza encontra o vermelho
+    pincel.fill(); //preencha esta forma
+
+</script>
+-->
+<!-- 04
+  Vamos colocar uma circunferência azul no meio da nossa imagem
+    Posicionamento da esfera, que definiremos como 300 (X) e 200 (Y);
+    Tamanho, ou seja, o raio - que definiremos como 50;
+    O ângulo inicial, e o ângulo final, em radianos (multiplicado por PI - 3,14);
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+
+</script>
+-->
+
+<!--05
+  Exercicio desenhando o crepper
+    Retângulo 1: 350, 300 (cabeça).
+    Retângulos 2 e 3: 90, 90 (olhos).
+    Retângulo 4: 70, 100 (nariz).
+    Retângulos 5 e 6: 40, 110 (parte da boca).
+
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //cabeça verde
+    pincel.fillStyle = 'darkgreen';
+    pincel.fillRect(200, 50, 350 ,300);
+
+    //olhos pretos
+    pincel.fillStyle = 'black';
+    pincel.fillRect(250, 110, 90, 90);
+    pincel.fillRect(410, 110, 90, 90);
+
+    // nariz
+    pincel.fillRect(340, 200, 70, 100);
+
+    // boca 
+    pincel.fillRect(300, 240, 40, 110);
+    pincel.fillRect(410, 240, 40, 110); 
+    
+</script>
+-->
+<!--06
+  desenhar esquadro
+
+<canvas width="600" height="400"></canvas>
+<script>
+var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(50, 50);
+    pincel.lineTo(50, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    pincel.moveTo(100, 175);
+    pincel.lineTo(100, 350);
+    pincel.lineTo(275, 350);
+    pincel.fill();
+</script>
+-->
+<!--07
+   bandeira-brasil.html -->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle='green';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle='yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.beginPath();
+    pincel.moveTo(300, 350);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.fillStyle='darkblue';
+    pincel.beginPath();
+
+    pincel.arc(300, 200, 100, 0, 2*3.14);
+    pincel.fill();
+
+</script>

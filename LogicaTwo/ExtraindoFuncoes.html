@@ -1,0 +1,248 @@
+<!--01
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+
+pincel.fillStyle = 'green';
+pincel.fillRect(0, 0, 50, 50);
+pincel.strokeStyle = 'black';
+pincel.strokeRect(0, 0, 50, 50);
+
+pincel.fillRect(50, 0, 50, 50);
+pincel.strokeRect(50, 0, 50, 50);
+
+pincel.fillRect(100, 0, 50, 50);
+pincel.strokeRect(100, 0, 50, 50);
+</script>
+-->
+
+<!--02
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadradoVerde(x) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'green';
+        pincel.fillRect(x, 0, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, 0, 50, 50);
+
+}
+
+desenhaQuadradoVerde(0);
+desenhaQuadradoVerde(50);
+desenhaQuadradoVerde(100);
+
+//Ao chamarmos a função desenhaQuadradoVerde() e passarmos 0
+//como parâmetro, este número ocupa o parâmetro x e é utilizado
+// na coordenada X do fillRect e do strokeRect. Na próxima chamada
+// da função, o parâmetro passado será 50, e este será o número
+// considerado no fillRect e no strokeRect, e assim sucessivamente.
+</script>
+-->
+<!--03
+  <canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+}
+
+desenhaQuadrado(0, 0, 'blue');
+desenhaQuadrado(0, 50, 'red');
+desenhaQuadrado(0, 100, 'yellow');
+
+</script>
+-->
+<!--
+  Utilizando as duas estruturas de repetição
+  while e for
+  
+-->
+<!--04
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+    }
+
+    var x = 0;
+    /*
+    while(x < 600) { //Todas as vezes que o loop for executado, x será acrescido de 50,  até o limite de 600.
+    desenhaQuadrado(x, 0, 'green');
+    desenhaQuadrado(x, 50, 'red');
+    desenhaQuadrado(x, 100, 'blue');
+    x = x + 50;
+    }
+    */
+    /*O for nos permite criar uma variável internamente,
+     portanto nossa var x = 0 estará inserida nele, assim como a
+     condição x < 600, e o incremento x = x + 5
+    */
+    for(var x = 0; x < 600; x = x + 50) {
+    desenhaQuadrado(x, 0, 'green');
+    }
+</script>
+-->
+<!--05
+    Desenha flor
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*3.14);
+        pincel.fill();
+    }
+    desenhaCirculo(300, 220, 10, 'blue');
+    desenhaCirculo(300, 200, 10, 'red');
+    desenhaCirculo(300, 180, 10, 'yellow');
+
+    desenhaCirculo(280, 200, 10, 'orange');
+    desenhaCirculo(320, 200, 10, 'black');
+    
+</script>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function desenhaFlor() {
+
+        desenhaCirculo(300, 220, 10, 'blue');
+        desenhaCirculo(300, 200, 10, 'red');
+        desenhaCirculo(300, 180, 10, 'yellow');
+
+        desenhaCirculo(280, 200, 10, 'orange');
+        desenhaCirculo(320, 200, 10, 'black');
+
+    }
+
+    desenhaFlor();
+
+</script>
+-->
+<!--
+  o circulo vermelho é o centro da nossa flor
+  e ele está posicionado em 300 (x), 200 (y). Veja que os demais
+  círculos se posicionam 20 pixels do círculo vermelho, 
+  tanto acima/abaixo ou direita/esquerda, a distância é sempre a
+  mesma. Sendo assim, podemos indicar a posição x e y de onde o 
+  centro da flor será plotado/desenhado e dentro da função ajustar
+  esse valor somando/subtraindo 20 pixels:
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function desenhaFlor(x, y) {
+
+        desenhaCirculo(x, y+20, 10, 'blue');
+        desenhaCirculo(x, y, 10, 'red');
+        desenhaCirculo(x, y-20, 10, 'yellow');
+        desenhaCirculo(x-20, y, 10, 'orange');
+        desenhaCirculo(x+20, y, 10, 'black');
+    }
+
+    desenhaFlor(300, 200);
+
+</script>
+-->
+<!-- 06
+    fracao.html
+    Escreva uma função desenhaQuadrado, que recebe x, y, o tamanho
+    e a cor. Cada quadrado desenhado deve utilizar um stroke.
+ -->
+
+<meta charset="UTF-8">
+<canvas width="700" height="500"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle=cor;
+        pincel.fillRect(x,y, tamanho, tamanho);
+        pincel.strokeStyle='black';
+        pincel.strokeRect(x,y, tamanho, tamanho);
+    }
+
+    function desenhaTexto(texto, x , y) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='20px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y); //fillText, que recebe o texto e as coordenadas onde deve aparecer
+    }
+
+
+    desenhaTexto("Qual é a fração?", 50, 30);
+
+    var y = 50;
+    desenhaQuadrado(50, y, 100, 'green');
+    desenhaQuadrado(150, y, 100, 'green');
+    desenhaQuadrado(250, y, 100, 'green');
+    desenhaQuadrado(350, y, 100, 'white');
+
+</script>

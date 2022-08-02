@@ -143,7 +143,7 @@ mostra("FIM");
 </script>
 
 -->
-<!--
+<!--05
 Imprima em ordem decrescente todos os números entre 20 e 0,
 incluindo os limites! No final, escreva a palavra "FIM". 
 DICA: você pode decrementar uma variável!
@@ -170,3 +170,64 @@ DICA: você pode decrementar uma variável!
     mostra("FIM");
 </script>
 -->
+<!--06
+  A estrutura do for() possui a mesma funcionalidade do while(),
+  com a diferença de que ela é divida em três partes.
+  A primeira é uma variável para inicializá-lo,
+  a que será incrementada, o segundo contém a condição de repetição,
+  a última parte do for() é o incremento da variável multiplicador,
+  declarada no espaço1.
+
+<script>
+function pulaLinha() {
+document.write("<br>");
+document.write("<br>");
+}
+
+function mostra(frase) {
+document.write(frase);
+pulaLinha();
+}
+
+for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+mostra(7 * multiplicador);
+}
+mostra("FIM");
+</script>
+-->
+<!--07
+Queremos que o programa funcione de modo a perguntar ao usuário a
+quantidade de familiares a serem analisados. O usuário insere a
+resposta e, em seguida, queremos que o programa pergunte as idades
+dos familiares. O número de vezes que o programa perguntará é igual
+ao número de familiares inseridos pelo usuário.Além disso, teremos
+que somar as idades inseridas para podermos, ao final, calcular a média. 
+
+
+<script>
+  function pulaLinha() {
+      document.write("<br>");
+      document.write("<br>");
+  }
+  function mostra(frase) {
+      document.write(frase);
+      pulaLinha();
+  }
+  
+  var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+  var numero = 1;
+
+  while(numero <= totalFamiliares) {
+  var totalIdades = 0;
+      var idade = parseInt(prompt("Informe idade do familiar"));
+      totalIdades = totalIdades + idade;
+      numero++;
+  
+  }
+  var mediaDasIdades = totalIdades/totalFamiliares
+  mostra("A média das idades dos familiares é " + mediaDasIdades);
+  mostra("FIM");
+  </script>
+  -->
+
+  
