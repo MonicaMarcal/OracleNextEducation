@@ -108,7 +108,8 @@ desenhaQuadrado(0, 100, 'yellow');
     }
 </script>
 -->
-<!--Desenha flor
+<!--05
+    Desenha flor
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -174,7 +175,7 @@ desenhaQuadrado(0, 100, 'yellow');
   mesma. Sendo assim, podemos indicar a posição x e y de onde o 
   centro da flor será plotado/desenhado e dentro da função ajustar
   esse valor somando/subtraindo 20 pixels:
--->
+
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -202,5 +203,46 @@ desenhaQuadrado(0, 100, 'yellow');
     }
 
     desenhaFlor(300, 200);
+
+</script>
+-->
+<!-- 06
+    fracao.html
+    Escreva uma função desenhaQuadrado, que recebe x, y, o tamanho
+    e a cor. Cada quadrado desenhado deve utilizar um stroke.
+ -->
+
+<meta charset="UTF-8">
+<canvas width="700" height="500"></canvas>
+
+<script>
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle=cor;
+        pincel.fillRect(x,y, tamanho, tamanho);
+        pincel.strokeStyle='black';
+        pincel.strokeRect(x,y, tamanho, tamanho);
+    }
+
+    function desenhaTexto(texto, x , y) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='20px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y); //fillText, que recebe o texto e as coordenadas onde deve aparecer
+    }
+
+
+    desenhaTexto("Qual é a fração?", 50, 30);
+
+    var y = 50;
+    desenhaQuadrado(50, y, 100, 'green');
+    desenhaQuadrado(150, y, 100, 'green');
+    desenhaQuadrado(250, y, 100, 'green');
+    desenhaQuadrado(350, y, 100, 'white');
 
 </script>
