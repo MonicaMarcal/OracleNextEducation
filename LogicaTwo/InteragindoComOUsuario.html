@@ -262,7 +262,7 @@ o onmouseup:quando o botão do mouse é solto.
 Que tal então criar duas funções, a primeira habilitaDesenho e a segunda desabilitaDesenho
 e associar uma com cada um desses eventos.
 A primeira atribui true para a variável desenha e a segunda atribui false.
--->
+
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -304,3 +304,48 @@ A primeira atribui true para a variável desenha e a segunda atribui false.
     tela.onmouseup = desabilitaDesenhar;
 
 </script>
+-->
+
+<!--
+    usuário poder escolher de uma paleta a cor que desejar
+-->
+<canvas width="600" height="400"></canvas>
+<br>
+Escolha uma cor <input type="color"> <!--abre paleta de cores para o usuario escolher-->
+
+<script>
+    var cor = document.querySelector('input');
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var desenha = false;
+    
+    function desenhaCirculo(evento) {
+
+        if(desenha) {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = cor.value; // sempre pega o valor atual da cor!
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+        }
+        console.log(x + ',' + y);
+    }
+    tela.onmousemove = desenhaCirculo;
+
+    function habilitaDesenhar() {
+        desenha = true;
+    }
+
+    function desabilitaDesenhar() {
+        desenha = false;
+    }
+    tela.onmousedown = habilitaDesenhar;
+    tela.onmouseup = desabilitaDesenhar;
+
+</script>
+
