@@ -1,0 +1,156 @@
+<!--
+    O método setInterval() chama atualizaTela();
+    Este, quando executado, faz o limpaTela(), desenhaCirculo()
+    e incrementa o valor de x;
+    O setInterval() aguarda 20 milisegundos, para repetir o processo,
+    sempre incrementando o valor de x, o que faz com que nossa esfera
+    "se mova" para a direita.
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+    pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 20;
+
+    function atualizaTela() {
+
+    limpaTela();
+    desenhaCirculo(x, 20, 10);
+    x++;
+    }
+
+    setInterval(atualizaTela, 10);
+
+</script>
+-->
+<!--
+ O círculo, assim que chegar no canto direito da tela, volte.
+ No final, o círculo deve ficar indo e voltando eternamente.
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 20;
+
+    var sentido = 1;
+
+    function atualizaTela() {
+
+        limpaTela();
+
+        if( x > 600) {
+            sentido = -1;
+        } else if (x < 0) {
+            sentido = 1;
+        } 
+
+        desenhaCirculo(x, 20, 10);
+        x = x + sentido;
+    }
+
+    setInterval(atualizaTela, 10);
+
+</script>
+-->
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var x = 20;
+    var y = 20;
+
+    // códigos do teclado
+
+    var esquerda = 37
+    var cima = 38
+    var direita = 39
+    var baixo = 40
+
+    var taxa = 10;
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+
+    function atualizaTela() {
+
+        limpaTela();
+        desenhaCirculo(x, y, 10);
+    }
+
+    setInterval(atualizaTela, 20);
+
+    function leDoTeclado(evento) {
+
+        if(evento.keyCode == cima) {
+
+            y = y - taxa;
+
+        } else if (evento.keyCode == baixo) {
+
+            y = y + taxa;
+
+        } else if (evento.keyCode == esquerda) {
+
+            x = x - taxa;
+
+        } else if (evento.keyCode == direita) {
+
+            x = x + taxa;
+        }
+    }
+
+   document.onkeydown = leDoTeclado;
+
+</script>
