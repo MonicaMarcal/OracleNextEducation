@@ -156,3 +156,196 @@
 
 </script>
 -->
+
+<!--07
+    Toda vez que o usuário clicar na tela com o SHIFT pressionado,
+    vamos somar 10 ao valor do raio atual. Sendo assim, mesmo soltando
+    o SHIFT as próximas bolinhas utilizarão o mesmo valor de raio.
+    Se clicarmos diversas vezes segurando SHIFT teremos 
+    uma bola cada vez maior. 
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 10;
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+        console.log(x + ',' + y);
+
+        if (evento.shiftKey) {
+
+           raio = raio + 10;
+        }
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+
+    }
+
+    tela.onclick = desenhaCirculo;
+
+</script>
+-->
+
+<!--08
+    Raio não pode ultrapassar 40.
+    Se o usuário clicar na tela com a tecla ALT pressionada,o raio deve diminuir 5.
+    Para saber se a tecla ALT está pressionada,fazemos evento.altKey. 
+    O decremento do raio deverá ser de 5 em 5 e o tamanho mínimo da bolinha deve ser de 10 que é o tamanho original. 
+
+    if para saber se as teclas estão pressionadas,
+    operador && para verificar se SHIFT e ALT estão sendo 
+    pressionadas ao mesmo tempo. 
+
+    OBS: ctrlKey para linux
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 10;
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+        console.log(x + ',' + y);
+
+        if (evento.shiftKey && evento.ctrlKey) {
+
+            alert('Só aperte uma tecla por vez, por favor!');
+
+        } else if(evento.shiftKey && raio + 10 <= 40) { //raio não pode ultrapassar 40.
+            raio = raio + 10;
+
+        } else if(evento.ctrlKey && raio - 5 >= 10) {
+            raio = raio - 5;
+
+        }
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+
+    }
+
+    tela.onclick = desenhaCirculo;
+
+</script>
+-->
+<!--09
+Declarar uma variável booleana chamada desenha, que começa como false.
+É essa variável que será utilizada pela função desenhaCirculo para saber
+se ela deve ou não desenhar.
+
+onmousedown:serve para executar um código quando o mouse é pressionado 
+o onmouseup:quando o botão do mouse é solto.
+Que tal então criar duas funções, a primeira habilitaDesenho e a segunda desabilitaDesenho
+e associar uma com cada um desses eventos.
+A primeira atribui true para a variável desenha e a segunda atribui false.
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var desenha = false;
+
+    function desenhaCirculo(evento) {
+
+        if(desenha) {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = 'blue';
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+        }
+        console.log(x + ',' + y);
+    }
+
+    tela.onmousemove = desenhaCirculo;
+
+    function habilitaDesenhar() {
+
+        desenha = true;
+    }
+
+    function desabilitaDesenhar() {
+
+        desenha = false;
+    }
+
+    tela.onmousedown = habilitaDesenhar;
+
+    tela.onmouseup = desabilitaDesenhar;
+
+</script>
+-->
+
+<!--
+    usuário poder escolher de uma paleta a cor que desejar
+-->
+<canvas width="600" height="400"></canvas>
+<br>
+Escolha uma cor <input type="color"> <!--abre paleta de cores para o usuario escolher-->
+
+<script>
+    var cor = document.querySelector('input');
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var desenha = false;
+    
+    function desenhaCirculo(evento) {
+
+        if(desenha) {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = cor.value; // sempre pega o valor atual da cor!
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+        }
+        console.log(x + ',' + y);
+    }
+    tela.onmousemove = desenhaCirculo;
+
+    function habilitaDesenhar() {
+        desenha = true;
+    }
+
+    function desabilitaDesenhar() {
+        desenha = false;
+    }
+    tela.onmousedown = habilitaDesenhar;
+    tela.onmouseup = desabilitaDesenhar;
+
+</script>
+
