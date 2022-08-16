@@ -4,50 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styleDecodificador.css">
-  <link rel="stylesheet" href="reset.css">
-  <title>Decodificador Js</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+ <link rel="stylesheet" href="reset.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>DECODIFICADOR</title>
 </head>
 <body>
-    <header>
-      <section class="container">
-        <nav>
-          <a class="logoAlura" href="https://www.alura.com.br/"  target="_blank">
-            <img src="images/logoAlura.png" alt="logo da alura">
+  
+  <header>
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://www.alura.com.br/">
+            <figure class="image is-100x100">
+              <img  src="images/logoAlura.png" alt="logo da alura">
+            </figure>
           </a>
-        </nav>
-      </section>
-		</header>
-    
-    <main>
-        <section>
-          <article class="conteudo">
-            <div class="conteudoBx ">
-              <textarea id="inputTextResult"  maxlength="120" cols="40" rows="8" placeholder="Digite seu texto aqui para criptografar:"></textarea>
-                <img src="images/exclamation.png" alt="ponto de exclamação">
-                <label>Apenas letras minúsculas e sem acento</label>
-            <div>
-              <button class="copyButton" id="buttonEncrypt" type="button" onclick="encrypt()">Criptografar</button>
-              <button class="copyButton" id="buttonDecrypt" type="button" onclick="decrypt()">Descriptografar</button>
-            </div>
-            </div>
+        </div>
+      </nav>
+    </header>
 
-            <div class="conteudoBx ">
-              <!--<img  class="imagemBx" src="images/HighQuality.png">-->
-              <textarea  id="outputTextResult"  maxlength="120" cols="40" rows="8" placeholder="Nenhuma mensagem encontrada"></textarea>
-              <button  class="copyButton"  id="buttonCopy" type="button" onclick="copyencrypt()">Copiar</button>
+        <section class="section">
+          <div class="container">
+          <div class="field">
+            <div class="control">
+              <textarea id="inputTextResult" class="textarea" placeholder="Digite seu texto aqui para criptografar:"></textarea>
+              <img src="images/exclamation.png" alt="ponto de exclamação">
+              <label>Apenas letras minúsculas e sem acento</label>
             </div>
-          </article>
-          </section>
-    </main>
-    
-    <!--
-      <footer>
-			<p class="copyright">&copy; Decodificador JS - 2022</p>
-		</footer>
-    -->
-    
-    <script src="scriptDecodificador.js"></script> <!--Chamando js--> 
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" id="buttonEncrypt" type="button" onclick="encrypt()">Criptografar</button>
+              <button class="button is-link" id="buttonDecrypt" type="button" onclick="decrypt()">Descriptografar</button>
+            </div>
+          </div>
+          <div class="control">
+            <textarea id="outputTextResult" class="textarea" placeholder="Nenhuma mensagem encontrada"></textarea>
+            <!-- <img src="images/HighQuality.png">-->
+          <br>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button  class="button is-link"  id="buttonCopy" type="button" onclick="copyencrypt()">Copiar</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </section>
+  
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p class="copyright">&copy; Decodificador JS - 2022</p>
+      </div>
+    </footer>
+  <script src="scriptDecodificador.js"></script> <!--Chamando js--> 
 </body>
 </html>
 
