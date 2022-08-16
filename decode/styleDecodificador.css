@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+/*header*/
+header .container{
+	background: #798bff;
+	padding: 20px 0;
+}
+.logoAlura{
+  position: relative;
+	width: 940px;
+	margin: 0 auto;
+ 
+}
+/*main*/
+
+
+.conteudo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudoBx{
+  padding-right: 30px;
+}
+
+.conteudoBx textarea{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.copyButton{
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 24px;
+  background-color: #798bff;
+  color: rgb(255, 255, 255);
+}
+
+
+/*footer*/
+footer {
+	text-align: center;
+	padding: 40px 0;
+
+}
+
+.copyright {
+	color: #ba66ff;
+	font-size: 20px;
+	margin: 20px 0 0;
+}
+
