@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> 
+ <link rel="stylesheet" href="reset.css">
+  <script src="https://github.com/MonicaMarcal/DecodeONE/blob/main/decode/scriptDecodificador.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>DECODIFICADOR</title>
+</head>
+<body>
+  
+<!--Cabeçalho da pagina-->
+  <header>
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://www.alura.com.br/">
+            <figure class="image is-100x100">
+              <img  src="images/logoAlura.png" alt="logo da alura">
+            </figure>
+          </a>
+        </div>
+      </nav>
+    </header>
+<!--Sessão da area de texto e botões-->
+        <section class="section">
+          <div class="container">
+          <div class="field">
+            <div class="control">
+              <textarea id="inputTextResult" class="textarea" placeholder="Digite seu texto aqui para criptografar:"></textarea>
+              <img src="images/exclamation.png" alt="ponto de exclamação">
+              <br>
+              <label>Apenas letras minúsculas e sem acento</label>
+            </div>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" id="buttonEncrypt" type="button" onclick="encrypt()">Criptografar</button>
+              <button class="button is-link" id="buttonDecrypt" type="button" onclick="decrypt()">Descriptografar</button>
+            </div>
+          </div>
+          <div class="control">
+            <textarea id="outputTextResult" class="textarea" placeholder="Nenhuma mensagem encontrada"></textarea>
+          <br>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button  class="button is-link"  id="buttonCopy" type="button" onclick="copyencrypt()">Copiar</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </section>
+ <!--Final da pagina--> 
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p class="copyright">&copy; Decodificador JS - 2022</p>
+      </div>
+    </footer>
+  <script src="scriptDecodificador.js"></script> <!--Chamando js--> 
+</body>
+</html>
