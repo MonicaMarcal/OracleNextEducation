@@ -30,6 +30,11 @@ Extras:
 - Linguagem de estilização: Bulma
 - Linguagem de marcação: HTML
 - Linguagem de programação: JavaScript
-- Editor: VsCode
+- Editor: VsCode!
 
 https://monicamarcal.github.io/OracleNextEducation/decodificacaoJs/decode.html
+
+
+[Captura de tela de 2022-08-23 14-23-00](https://user-images.githubusercontent.com/63027699/186224635-34fc98c3-8c53-4c7a-9f49-519a5c3a7d11.png)
+
+
