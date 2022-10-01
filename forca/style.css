@@ -1,0 +1,152 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open+Sans", sans-serif;
+}
+
+/*cores padrão do nosso aplicativo*/
+:root {
+  --purple:#7c37f3;
+  --blue: #33007b;
+  --pink: #ce0fd4;
+  --green: #02a021;
+  --red:  #ff0000;
+
+ 
+}
+
+body{
+  background-image: url(images/e.jpg);
+}
+
+/*caixa do jogo*/
+.container {
+  font-size: 16px;
+  background-color: #85b0ec;
+  width: 90vw;
+  max-width: 34em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 0.6em;
+  box-shadow: 0 1.2em 2.4em rgba(165, 69, 255, 0.25);
+}
+/*centralizando os botoes 'frutas,animais,paises' dentro da caixa do jogo*/
+#options-container {
+  text-align: center;
+}
+
+/*espaçando os botoes 'frutas,animais,paises' dentro da caixa do jogo*/
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+
+/*Estilizando os botões 'frutas,animais,paises' para ficar mais visiveis */
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid var(--blue);
+  background-color: #a057f9;
+  color: #000000;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+}
+#options-container button:disabled {
+  border: 3px solid #808080;
+  color: #808080;
+  background-color: #efefef;
+}
+
+#options-container button.active {
+  background-color: var(--pink);
+  border: 3px solid var(--blue);
+  color: #000000;
+}
+
+
+/*separando nossos botões de letras do alfabeto*/
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
+}
+/*estilizando os botões de letras do alfabeto por dentro*/
+#letter-container button {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.3em;
+  background-color: var(--purple);
+}
+
+/*Faz com que os botões das funções initializer e displayOptions desapareçam
+o alfabeto e as opçoes para o usuario
+*/
+.new-game-popup {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.6em;
+}
+/*centraliza nossos traços de letras*/
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8em;
+  margin: 0.6em 0 1.2em 0;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border: 3px solid var(--green);
+}
+/*Aparece apenas os botões frutas/animais/paises aparareçam*/
+.hide{
+  display: none;
+}
+
+/*estilizando as fontes do nosso resultado de jogo*/
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+
+/*estilizando o botão 'novo jogo'*/
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  background-color: var(--pink);
+  border: 3px solid var(--blue);
+  color: #000000;
+  border-radius: 0.2em;
+}
+
+/*mostra cor verde se ganhou*/
+.win-msg {
+  color: var(--green);
+}
+/*mostra cor vermelha se perdeu*/
+.lose-msg {
+  color: var(--red);
+}
