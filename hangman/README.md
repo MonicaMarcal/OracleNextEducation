@@ -12,7 +12,7 @@
 
 ## Instalação
 ```sh
-git clone https://github.com/MonicaMarcal/OracleNextEducation.git
+git clone https://github.com/MonicaMarcal/OracleNextEducation.git 
 cd OracleNextEducation
 cd hangman
 index.html abra esse arquivo no seu navegador
