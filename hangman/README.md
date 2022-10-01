@@ -1,5 +1,5 @@
 <h1 align="center">
-  <center>Jogo da forca Javascript</center>
+  <center>Jogo da forca com JavaScript</center>
 </h1>
 
  
