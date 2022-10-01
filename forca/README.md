@@ -19,6 +19,8 @@ index.html abra esse arquivo no seu navegador
 
 ```
 
+Aplicação online: https://monicamarcal.github.io/OracleNextEducation/forca/forca.html
+
 
 ![Captura de tela de 2022-09-30 23-57-42](https://user-images.githubusercontent.com/63027699/193383853-8d65354c-6ed5-4297-88e7-d9c1b51b8c28.png)
 
