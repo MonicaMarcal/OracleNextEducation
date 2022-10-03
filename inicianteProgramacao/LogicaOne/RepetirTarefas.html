@@ -1,0 +1,233 @@
+<!-- Exercicios da aula, para verificar descomente o que deseja ver-->
+
+<!--Declararemos uma variável anoCopa que receberá o ano 1930:
+Criaremos um alert para exibir a frase "Teve copa em", concatenada com a variável anoCopa:
+Nosso objetivo é fazer com que o programa exiba todos os anos em que houve copas do mundo.
+Precisamos informar ao programa que os anos de copa serão anoCopa mais 4:
+-->
+<!--01
+  <meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+/*
+var limite = prompt("Entre com a data limite");
+var anoCopa = 1930;
+while(anoCopa <= 2016) {
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+mostra("FIM");
+
+
+//O while(true) indica que sempre será repetido o conteúdo do bloco dessa função.
+// Se o while receber false, nada será repetido.
+
+//Assim como a condição if, o while testará se anoCopa é menor ou igual a 2016,
+//se for verdadeiro, as instruções contidas no bloco serão executadas.
+//Isso significa que o programa acessará o bloco, enquanto anoCopa <= 2016 for verdadeiro.
+
+//Ao chegarmos em 2017, é verificado se o número é menor ou igual a 2016,
+//não sendo, a repetição cessará, o programa sairá da instrução e imprimirá o alerta FIM.
+
+*/
+
+//Substituiremos o 2016 pela variável limite:
+var limite = parseInt(prompt("Entre com a data limite"));
+var anoCopa = 1930;
+while(anoCopa <= limite) {
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+mostra("FIM");
+</script>
+
+-->
+
+<!--02
+  exibir o mostra("Já era, você errou!")10 vezes
+<meta charset="UTF-8">
+<script>
+     function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+      }
+     function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+      function sorteia() {
+        return Math.round(Math.random() * 100);
+      } 
+    var numeroPensado = sorteia();
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+   
+    if(chute == numeroPensado) {
+      mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+        var contador = 1;
+        while( contador <= 10 ) {
+            mostra("Já era, você errou!");
+            contador = contador + 1;
+        }
+    }
+</script>
+-->
+
+<!--03
+Usando a instrução while imprima todos os números pares
+de 1 a 100 e ao final imprima a palavra "FIM".
+DICA: incremente o contador de dois em dois! 
+
+ <meta charset="UTF-8">
+ <script>
+     function pulaLinha() {
+     document.write("<br>");
+     document.write("<br>");
+ }
+    function mostra(frase) {
+     document.write(frase);
+     pulaLinha();
+ }  
+    var numeroPar = 2;
+    while(numeroPar <= 100) {
+    mostra(numeroPar);
+    numeroPar = numeroPar + 2;
+}
+mostra("FIM");
+</script>
+-->
+
+<!--04
+Imprima todos os números entre 30 e 40 (inclusive 30 e 40),
+porém os números 33 e 37 não devem ser impressos!
+No final escreva a palavra "FIM". Use o while para essa tarefa.
+DICA: o if pode ajudá-lo!
+
+<meta charset="UTF-8">
+ <script>
+     function pulaLinha() {
+     document.write("<br>");
+     document.write("<br>");
+ }
+    function mostra(frase) {
+     document.write(frase);
+     pulaLinha();
+ }  
+var contador = 30; //inicia no numero 30
+
+while(contador <= 40) { // menor ou igual a 40
+    if( contador == 33 ) { //se igual a 33 conte mais 1
+    contador = contador + 1;
+    }
+    else if(contador == 37) {    //se igual a 37 conte mais 1
+        contador = contador + 1;
+    }
+    else { //senão mostre os numeros do contador
+    mostra(contador);
+    contador = contador + 1; 
+    }
+  }
+
+mostra("FIM");
+</script>
+
+-->
+<!--05
+Imprima em ordem decrescente todos os números entre 20 e 0,
+incluindo os limites! No final, escreva a palavra "FIM". 
+DICA: você pode decrementar uma variável!
+
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var contador = 20;
+
+    while( contador >= 0) {
+
+      mostra(contador);
+      contador = contador - 1;
+    }
+
+    mostra("FIM");
+</script>
+-->
+<!--06
+  A estrutura do for() possui a mesma funcionalidade do while(),
+  com a diferença de que ela é divida em três partes.
+  A primeira é uma variável para inicializá-lo,
+  a que será incrementada, o segundo contém a condição de repetição,
+  a última parte do for() é o incremento da variável multiplicador,
+  declarada no espaço1.
+
+<script>
+function pulaLinha() {
+document.write("<br>");
+document.write("<br>");
+}
+
+function mostra(frase) {
+document.write(frase);
+pulaLinha();
+}
+
+for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+mostra(7 * multiplicador);
+}
+mostra("FIM");
+</script>
+-->
+<!--07
+Queremos que o programa funcione de modo a perguntar ao usuário a
+quantidade de familiares a serem analisados. O usuário insere a
+resposta e, em seguida, queremos que o programa pergunte as idades
+dos familiares. O número de vezes que o programa perguntará é igual
+ao número de familiares inseridos pelo usuário.Além disso, teremos
+que somar as idades inseridas para podermos, ao final, calcular a média. 
+
+
+<script>
+  function pulaLinha() {
+      document.write("<br>");
+      document.write("<br>");
+  }
+  function mostra(frase) {
+      document.write(frase);
+      pulaLinha();
+  }
+  
+  var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+  var numero = 1;
+
+  while(numero <= totalFamiliares) {
+  var totalIdades = 0;
+      var idade = parseInt(prompt("Informe idade do familiar"));
+      totalIdades = totalIdades + idade;
+      numero++;
+  
+  }
+  var mediaDasIdades = totalIdades/totalFamiliares
+  mostra("A média das idades dos familiares é " + mediaDasIdades);
+  mostra("FIM");
+  </script>
+  -->
+
+  
