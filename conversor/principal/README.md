@@ -14,7 +14,7 @@
 ```sh
 git clone https://github.com/MonicaMarcal/OracleNextEducation.git 
 cd OracleNextEducation
-cd conversor
+cd conversor/principal
 arquivo: Principal.java - run java
 
 ```
