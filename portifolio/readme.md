@@ -5,6 +5,6 @@
 O projeto foi desenvolvido durante o curso da  <a href="https://www.oracle.com/br/" target="_blank">ONE</a>, um desafio da construção de um portifolio em html, css e aplicando responsividade.
 
 
-## Veja a  <a href="https://monicamarcal.github.io/Challenge_Portifolio/Portifolio/index.html">aplicação no ar</a>
+## Veja a  <a href="https://monicamarcal.github.io/OracleNextEducation/portifolio/index.html">aplicação no ar</a>
 
  
