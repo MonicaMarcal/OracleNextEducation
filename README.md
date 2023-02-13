@@ -1,8 +1,8 @@
 # OracleNextEducation
 Course Oracle + Alura Latam
 
-<p align="center">
-<img src="./babges/logica.png" width="280" >
-<img src="./babges/htmlcss.png" width="250" >
-<img src="./babges/js.png" width="260" >
+<p align="left">
+<img src="./babges/logica.png" width="100" >
+<img src="./babges/htmlcss.png" width="100" >
+<img src="./babges/js.png" width="100" >
 </p>
