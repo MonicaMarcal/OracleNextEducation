@@ -11,13 +11,9 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
-import controller.ReservasController;
-import model.Reservas;
-
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-import java.text.DateFormat;
 import java.text.Format;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -25,10 +21,6 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -36,7 +28,7 @@ import javax.swing.border.LineBorder;
 
 @SuppressWarnings("serial")
 public class ReservasView extends JFrame {
-	private static final long serialVersionUID = 1L;
+
 	private JPanel contentPane;
 	public static JTextField txtValor;
 	public static JDateChooser txtDataE;
@@ -47,10 +39,6 @@ public class ReservasView extends JFrame {
 	private JLabel lblValorSimbolo; 
 	private JLabel labelAtras;
 
-	private DateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
-
-	private int mouseX, mouseY;
-	private ReservasController reservasController;
 	/**
 	 * Launch the application.
 	 */
@@ -72,7 +60,6 @@ public class ReservasView extends JFrame {
 	 */
 	public ReservasView() {
 		super("Reserva");
-		this.reservasController = new ReservasController();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
@@ -155,10 +142,7 @@ public class ReservasView extends JFrame {
 		txtDataS.addPropertyChangeListener(new PropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent evt) {
 				//Ativa o evento, após o usuário selecionar as datas, o valor da reserva deve ser calculado
-				calcularValor(txtDataE, txtDataS);
-				lblValorSimbolo.setVisible(true);
 			}
-
 		});
 		txtDataS.setDateFormatString("yyyy-MM-dd");
 		txtDataS.getCalendarButton().setBackground(SystemColor.textHighlight);
@@ -311,14 +295,14 @@ public class ReservasView extends JFrame {
 		btnProximo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {
-					salvarReserva();
+				if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {		
+					RegistroHospede registro = new RegistroHospede();
+					registro.setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(null, "Deve preencher todos os campos.");
 				}
-			}
+			}						
 		});
-
 		btnProximo.setLayout(null);
 		btnProximo.setBackground(SystemColor.textHighlight);
 		btnProximo.setBounds(238, 493, 122, 35);
@@ -333,39 +317,6 @@ public class ReservasView extends JFrame {
 		btnProximo.add(lblSeguinte);
 	}
 
-
-	//metodo
-	public void salvarReserva(){
-		try {
-			String dataE = ((JTextField)txtDataE.getDateEditor().getUiComponent()).getText();
-			String dataS = ((JTextField)txtDataS.getDateEditor().getUiComponent()).getText();
-			Reservas reservas = new Reservas(Date.valueOf(dataE), Date.valueOf(dataS), ReservasView.txtValor.getText(), ReservasView.txtFormaPagamento.getSelectedItem().toString());
-			this.reservasController.salvar(reservas);
-			RegistroHospede hospede = new RegistroHospede(reservas.getId());
-			hospede.setVisible(true);
-			dispose();
-
-		} catch (Exception ex) {
-			JOptionPane.showMessageDialog(contentPane, "Error: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-		}
-	}
-
-	private void calcularValor(JDateChooser dataE,JDateChooser dataS) {
-		if(dataE.getDate() != null && dataS.getDate() !=null) {
-			Calendar inicio = dataE.getCalendar();
-			Calendar fin = dataS.getCalendar();
-			int dias = -1;
-			int diaria = 180;
-			int valor;
-
-			while(inicio.before(fin)||inicio.equals(fin)) {
-				dias++;
-				inicio.add(Calendar.DATE,1);
-			}
-			valor = dias * diaria;
-			txtValor.setText("" + valor);
-		}
-	}
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();

@@ -28,7 +28,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/JARS/mchange-commons-java-0.2.16.jar!/" />
+          <root url="jar://$MODULE_DIR$/JARS/mysql-connector-java-8.0.17.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -37,7 +37,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/JARS/mysql-connector-java-8.0.17.jar!/" />
+          <root url="jar://$MODULE_DIR$/JARS/mchange-commons-java-0.2.16.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

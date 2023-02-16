@@ -63,7 +63,7 @@ public class Login extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 788, 527);
-		panel.setBackground(Color.white);
+		panel.setBackground(Color.WHITE);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -84,12 +84,7 @@ public class Login extends JFrame {
 		btnexit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				String [] buttonExit = {"SIM", "NÃO"};
-				int buttonResult = JOptionPane.showOptionDialog(null,"Confirmar","Deseja sair?",
-					JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, buttonExit, buttonExit[1]);
-				if (buttonResult == JOptionPane.YES_OPTION){
-					System.exit(0);
-				}
+				System.exit(0);
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -111,9 +106,7 @@ public class Login extends JFrame {
 		btnexit.add(labelExit);
 		labelExit.setForeground(SystemColor.text);
 		labelExit.setFont(new Font("Roboto", Font.PLAIN, 18));
-		labelExit.setHorizontalAlignment(SwingConstants.CENTER);
-
-
+		labelExit.setHorizontalAlignment(SwingConstants.CENTER);		
 		
 		txtUsuario = new JTextField();
 		txtUsuario.addMouseListener(new MouseAdapter() {
