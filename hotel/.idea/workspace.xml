@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81036437-0cdf-42b2-aeb7-0cc38dcb7021" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../HotelJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HotelJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/JARS/c3p0-0.9.5.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/JARS/jcalendar-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/JARS/mchange-commons-java-0.2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/JARS/mysql-connector-java-8.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/Projeto_challenge_hotel_java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/controller/ReservasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/dao/ReservaDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/factory/ConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/factory/TesteConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/Ha-100px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/aH-150px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/aH-40px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/hotel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/icon-buscar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/icon-reservas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/img-hotel-login-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/lOGO-50PX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/menu-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/pessoas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/registro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/reservado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/imagenes/reservas-img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/model/Hospedes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/model/Reservas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Buscar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuPrincipal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/MenuUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/RegistroHospede.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/ReservasView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Sucesso$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/out/production/Projeto_challenge_hotel_java/views/Sucesso.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/controller/ReservasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/dao/HospedeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/dao/ReservaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/factory/ConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/factory/TesteConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/Ha-100px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/aH-150px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/aH-40px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/hotel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/icon-buscar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/icon-reservas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/img-hotel-login-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/lOGO-50PX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/menu-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/pessoas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/registro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/reservado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/imagenes/reservas-img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/model/Hospedes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/model/Reservas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/Buscar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/MenuPrincipal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/MenuUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/RegistroHospede.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/ReservasView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/Projeto_challenge_hotel_java/src/views/Sucesso.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HotelJava/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/Vector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/atari.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/babyyoda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/banner-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/camisasnes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/canecasw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/consolas-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/console.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/darth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/gba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/grogu-exposito.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/jsxbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/legosw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/lupa-negro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/lupa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/mandalorian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/mini darth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/pikachu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/ps5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/relogio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/snes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/sonic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/stormtropper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/styles/add-products.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/styles/edit-product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/styles/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/styles/products.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/taza trupper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/trupper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/vr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/assets/yoda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/controllers/atualiza-produto-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/controllers/cria-produtos-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/controllers/lista-produtos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/controllers/login-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/controllers/produtos-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/formatterPrices.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/servicos/produto-servicos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/views/add-products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/views/edit-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebCommerceJS/Challenge - Ecommerce -AluraGeek/views/produto.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2LncOihxClIBcobNVphz5tCfpeg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/monica/OracleNextEducation/hotel"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81036437-0cdf-42b2-aeb7-0cc38dcb7021" name="Changes" comment="" />
+      <created>1676510257061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676510257061</updated>
+    </task>
+    <servers />
+  </component>
+</project>
