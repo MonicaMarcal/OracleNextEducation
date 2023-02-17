@@ -11,9 +11,13 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
+import controller.ReservasController;
+import model.Reservas;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.sql.Date;
 import java.text.Format;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -39,6 +43,7 @@ public class ReservasView extends JFrame {
 	private JLabel lblValorSimbolo; 
 	private JLabel labelAtras;
 
+	private ReservasController reservasController;
 	/**
 	 * Launch the application.
 	 */
@@ -60,6 +65,8 @@ public class ReservasView extends JFrame {
 	 */
 	public ReservasView() {
 		super("Reserva");
+		this.reservasController = new ReservasController();
+
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
@@ -298,6 +305,7 @@ public class ReservasView extends JFrame {
 				if (ReservasView.txtDataE.getDate() != null && ReservasView.txtDataS.getDate() != null) {		
 					RegistroHospede registro = new RegistroHospede();
 					registro.setVisible(true);
+					salvarReserva();
 				} else {
 					JOptionPane.showMessageDialog(null, "Deve preencher todos os campos.");
 				}
@@ -315,6 +323,19 @@ public class ReservasView extends JFrame {
 		lblSeguinte.setFont(new Font("Roboto", Font.PLAIN, 18));
 		lblSeguinte.setBounds(0, 0, 122, 35);
 		btnProximo.add(lblSeguinte);
+	}
+
+	//metodo
+	public void salvarReserva(){
+		try {
+			String dataE = ((JTextField)txtDataE.getDateEditor().getUiComponent()).getText();
+			String dataS = ((JTextField)txtDataS.getDateEditor().getUiComponent()).getText();
+			Reservas reservas = new Reservas(Date.valueOf(dataE), Date.valueOf(dataS), ReservasView.txtValor.getText(), ReservasView.txtFormaPagamento.getSelectedItem().toString());
+			reservasController.salvar(reservas);
+
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(contentPane, "Registro salvo");
+		}
 	}
 
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
