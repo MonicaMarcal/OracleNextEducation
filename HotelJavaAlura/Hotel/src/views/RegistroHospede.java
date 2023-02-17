@@ -7,6 +7,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import java.awt.Color;
 import com.toedter.calendar.JDateChooser;
+import controller.HospedesController;
+import controller.ReservasController;
+import model.Hospedes;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
@@ -39,6 +43,9 @@ public class RegistroHospede extends JFrame {
 	private JLabel labelAtras;
 	int xMouse, yMouse;
 
+	private ReservasController reservasController;
+	private HospedesController hospedesController;
+
 	/**
 	 * Launch the application.
 	 */
@@ -59,7 +66,9 @@ public class RegistroHospede extends JFrame {
 	 * Create the frame.
 	 */
 	public RegistroHospede() {
-		
+		this.hospedesController = new HospedesController();
+		this.reservasController = new ReservasController();
+
 		setIconImage(Toolkit.getDefaultToolkit().getImage(RegistroHospede.class.getResource("/imagenes/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 634);
@@ -284,6 +293,7 @@ public class RegistroHospede extends JFrame {
 		btnsalvar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				salvarHospede();
 			}
 		});
 		btnsalvar.setLayout(null);
@@ -314,7 +324,21 @@ public class RegistroHospede extends JFrame {
 		panel.add(logo);
 		logo.setIcon(new ImageIcon(RegistroHospede.class.getResource("/imagenes/Ha-100px.png")));
 	}
-	
+
+	private void salvarHospede() {
+		if (txtDataN.getDate() != null && !txtNome.equals("") && !txtSobrenome.equals("") && !txtTelefone.equals("")) {
+			String dataNascimento = ((JTextField) txtDataN.getDateEditor().getUiComponent()).getText();
+			int reserva = Integer.parseInt(txtNreserva.getText());
+			Hospedes hospedes = new Hospedes(txtNome.getText(), txtSobrenome.getText(),  java.sql.Date.valueOf(dataNascimento), txtNacionalidade.getSelectedItem().toString(), txtTelefone.getText(), reserva);
+			this.hospedesController.salvar(hospedes);
+			Sucesso sucesso = new Sucesso();
+			sucesso.setVisible(true);
+			dispose();
+		} else {
+			JOptionPane.showMessageDialog(this, "Você deve preencher todos os campos.");
+		}
+	}
+
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" y "y"
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
