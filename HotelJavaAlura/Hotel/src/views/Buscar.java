@@ -1,24 +1,24 @@
 package views;
 
+import controller.HospedesController;
+import controller.ReservasController;
+import model.Hospedes;
+import model.Reservas;
+
 import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
 import java.awt.Color;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTabbedPane;
 import java.awt.Toolkit;
-import javax.swing.SwingConstants;
-import javax.swing.JSeparator;
-import javax.swing.ListSelectionModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
 
 @SuppressWarnings("serial")
 public class Buscar extends JFrame {
@@ -32,6 +32,7 @@ public class Buscar extends JFrame {
 	private JLabel labelAtras;
 	private JLabel labelExit;
 	int xMouse, yMouse;
+
 
 	/**
 	 * Launch the application.
@@ -52,7 +53,8 @@ public class Buscar extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Buscar() {
+	public Buscar() throws SQLException {
+
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Buscar.class.getResource("/imagenes/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
@@ -107,7 +109,8 @@ public class Buscar extends JFrame {
 		modeloHospedes.addColumn("Nacionalidade");
 		modeloHospedes.addColumn("Telefone");
 		modeloHospedes.addColumn("Numero de Reserva");
-		
+
+
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon(Buscar.class.getResource("/imagenes/Ha-100px.png")));
 		lblNewLabel_2.setBounds(56, 51, 104, 107);
@@ -220,6 +223,13 @@ public class Buscar extends JFrame {
 		lblBuscar.setFont(new Font("Roboto", Font.PLAIN, 18));
 		
 		JPanel btnEditar = new JPanel();
+		btnEditar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+			}
+		});
+
 		btnEditar.setLayout(null);
 		btnEditar.setBackground(new Color(12, 138, 199));
 		btnEditar.setBounds(635, 508, 122, 35);
@@ -234,6 +244,7 @@ public class Buscar extends JFrame {
 		btnEditar.add(lblEditar);
 		
 		JPanel btnDeletar = new JPanel();
+
 		btnDeletar.setLayout(null);
 		btnDeletar.setBackground(new Color(12, 138, 199));
 		btnDeletar.setBounds(767, 508, 122, 35);
@@ -248,7 +259,11 @@ public class Buscar extends JFrame {
 		btnDeletar.add(lblExcluir);
 		setResizable(false);
 	}
-	
+
+
+
+
+
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();
