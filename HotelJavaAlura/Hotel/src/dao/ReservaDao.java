@@ -3,6 +3,8 @@ package dao;
 import model.Reservas;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReservaDao {
     private Connection connection;
@@ -31,5 +33,70 @@ public class ReservaDao {
             throw new RuntimeException(e);
         }
 
+    }
+    public List<Reservas> buscar() {
+        List<Reservas> reservas = new ArrayList<Reservas>();
+        try {
+            String sql = "SELECT id, dataEntrada, dataSaida, valor, formaPagamento FROM reservas";
+
+            try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+                pstm.execute();
+
+                recuperaReservas(reservas, pstm);
+            }
+            return reservas;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Reservas> buscarId(String id) {
+        List<Reservas> reservas = new ArrayList<Reservas>();
+        try {
+
+            String sql = "SELECT id, dataEntrada, dataSaida, valor, formaPagamento FROM reservas WHERE id = ?";
+
+            try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+                pstm.setString(1, id);
+                pstm.execute();
+
+                recuperaReservas(reservas, pstm);
+            }
+            return reservas;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void alterar(Date dataEntrada, Date dataSaida, String valor, String formaPagamento, Integer id) {
+        try (PreparedStatement stm = connection
+                .prepareStatement("UPDATE reservas SET dataEntrada = ?, dataSaida = ?, valor = ?, formaPagamento = ? WHERE id = ?")) {
+            stm.setDate(1, dataEntrada);
+            stm.setDate(2, dataSaida);
+            stm.setString(3, valor);
+            stm.setString(4, formaPagamento);
+            stm.setInt(5, id);
+            stm.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void deletar(Integer id) {
+        try (PreparedStatement stm = connection.prepareStatement("DELETE FROM reservas WHERE id = ?")) {
+            stm.setInt(1, id);
+            stm.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private void recuperaReservas(List<Reservas> reservas, PreparedStatement pstm) throws SQLException {
+        try (ResultSet rst = pstm.getResultSet()) {
+            while (rst.next()) {
+                Reservas reserva = new Reservas(rst.getInt(1), rst.getDate(2), rst.getDate(3), rst.getString(4), rst.getString(5));
+
+                reservas.add(reserva);
+            }
+        }
     }
 }
