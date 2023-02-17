@@ -25,6 +25,7 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.util.Calendar;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -149,6 +150,8 @@ public class ReservasView extends JFrame {
 		txtDataS.addPropertyChangeListener(new PropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent evt) {
 				//Ativa o evento, após o usuário selecionar as datas, o valor da reserva deve ser calculado
+				calcularValor(txtDataE, txtDataS);
+				lblValorSimbolo.setVisible(true);
 			}
 		});
 		txtDataS.setDateFormatString("yyyy-MM-dd");
@@ -337,6 +340,24 @@ public class ReservasView extends JFrame {
 			JOptionPane.showMessageDialog(contentPane, "Registro salvo");
 		}
 	}
+
+	private void calcularValor(JDateChooser dataE,JDateChooser dataS) {
+		if(dataE.getDate() != null && dataS.getDate() !=null) {
+			Calendar inicio = dataE.getCalendar();
+			Calendar fim = dataS.getCalendar();
+			int dias = -1;
+			int diaria = 160;
+			int valor;
+
+			while(inicio.before(fim)||inicio.equals(fim)) {
+				dias++;
+				inicio.add(Calendar.DATE,1);
+			}
+			valor = dias * diaria;
+			txtValor.setText("" + valor);
+		}
+	}
+
 
 	//Código que permite movimentar a janela pela tela seguindo a posição de "x" e "y"	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
