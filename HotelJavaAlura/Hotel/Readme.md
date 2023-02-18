@@ -1,3 +1,6 @@
+
+<img width="300" heigth="300" src="https://img.shields.io/badge/java-O%20projeto%20n%C3%A3o%20est%C3%A1%20sendo%20trabalhado%20ativamente-yellow">
+
 # Challenge ONE | Java | Back-end | Hotel Alura 
 
 <p align="center" >
