@@ -1,0 +1,11 @@
+{
+  "name": "webecommerce",
+  "version": "1.0.0",
+  "description": "alura geek",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch db.json "
+  },
+  "author": "Mônica Marçal",
+  "license": "ISC"
+}
