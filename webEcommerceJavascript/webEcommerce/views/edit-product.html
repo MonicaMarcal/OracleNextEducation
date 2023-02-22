@@ -3,8 +3,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adicionar Produtos</title>
-
+  <title>Produtos</title>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,11 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
     />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/add-products.css" />
-
+    <link rel="stylesheet" href="../styles/edit-product.css" />
     <title>Alura Geek</title>
   </head>
-
   <body>
     <header>
       <nav>
@@ -35,42 +32,37 @@
           </div>
           <input i type="text" placeholder="O que desejo encontrar?" />
         </div>
-        <div class="login">
-          <a href="login.html"><button type="submit">Login</button></a>
-        </div>
       </nav>
     </header>
-    <main>
-      <section class="product-add">
-        <div class="product-add_title">Adicionar novo produto</div>
-        <form class="form-cadastro" data-form>
-          <input
-            class="product-add_input__url"
-            type="text"
-            placeholder="URL do Produto"
-            required
-            data-url
-          />
+    <section class="geral-products">
+      <div class="products_title">Edita produto</div>
+      <section class="products-section" data-allProducts>
+        <form action="#" class="form-control" data-form>
+          <img src="../assets/edit26.svg" data-url />
           <input
             class="product-add_input__name"
             type="text"
             placeholder="Nome do produto"
-            required
             data-nome
           />
           <input
             class="product-add_input__price"
             type="text"
             placeholder="Preço do produto"
-            required
             data-preco
           />
-          <button type="submit" class="product-add_btn">
-            Adicionar produto
+          <textarea
+            class="product-add_textarea__description"
+            type="text"
+            placeholder="Descrição do produto"
+            data-descricao
+          ></textarea>
+          <button type="submit" class="product-submit_btn">
+            Atualizar produto
           </button>
         </form>
       </section>
-    </main>
+    </section>
   </body>
   <section class="contato">
     <div class="referencia">
@@ -109,5 +101,8 @@
       <button>Enviar Mensagem</button>
     </div>
   </section>
-  <script type="module" src="../controllers/cria-produtos-controller.js"></script>
+  <script
+    type="module"
+    src=""
+  ></script>
 </html>
